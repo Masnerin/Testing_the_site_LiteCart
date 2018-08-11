@@ -49,7 +49,9 @@ admin = [Admin(username="admin",
                )
          ]
 
-new_customer = [Customer(firstname="Emma",
+new_customer = [Customer(username1="admin",
+                         password1="admin",
+                         firstname="Emma",
                          lastname="Brown",
                          phone="+0123456789",
                          address="New Street, 123",

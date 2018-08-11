@@ -6,7 +6,7 @@ class Admin:
 
 class Customer:
     def __init__(self, firstname=None, lastname=None, address=None, postcode=None, city=None, country=None, zone=None,
-                 email=None, phone=None, password=None
+                 email=None, phone=None, password=None, username1=None, password1=None
                  ):
         self.firstname = firstname
         self.lastname = lastname
@@ -18,6 +18,8 @@ class Customer:
         self.email = email
         self.phone = phone
         self.password = password
+        self.username1 = username1
+        self.password1 = password1
 
 
 class Product:

@@ -105,9 +105,11 @@ class Application:
         self.catalog_page.price_eur_input.send_keys(new_product.prices_eur)
         self.catalog_page.save_new_product()
 
-    def get_customer_ids(self):
+    def get_customer_ids(self, customer):
         if self.admin_panel_login_page.open().is_on_this_page():
-            self.admin_panel_login_page.enter_username("admin").enter_password("admin").submit_login()
+            self.admin_panel_login_page.username_input.send_keys(customer.username1)
+            self.admin_panel_login_page.password_input.send_keys(customer.password1)
+            self.admin_panel_login_page.submit_login()
         return self.customer_list_page.open().get_customer_ids()
 
     def product_in_the_cart(self):
